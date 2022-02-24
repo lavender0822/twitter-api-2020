@@ -22,7 +22,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 app.use((req, res, next) => {
-  res.locals.user = getUser(req)
+  res.user = helpers.getUser(req)
   next()
 })
 
